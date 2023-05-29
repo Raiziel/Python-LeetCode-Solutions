@@ -1,0 +1,8 @@
+import os.path as path
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        
+        if(path.commonprefix(strs)!=None):
+            return path.commonprefix(strs)
+        else:
+            return ""
