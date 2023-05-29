@@ -3,7 +3,7 @@
 NicholasValantino@gmail.com
 
 ## Description
-Hi! This is where I'll post my solutions/code to leetcode problems :)
+Hi! This is where I'll post my python solutions/code to leetcode problems :)
 
 ## Objective 
 || Goals|
