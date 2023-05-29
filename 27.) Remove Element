@@ -1,0 +1,12 @@
+from collections import Counter
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        
+        nums.sort()
+        frequency = Counter(nums)
+        iteration = frequency[val]
+        
+        for i in range(iteration):
+            nums.remove(val)
+        
+        return len(nums)
