@@ -1,0 +1,12 @@
+import numpy as np
+class Solution:
+    def judgeSquareSum(self, c: int) -> bool:
+        upper_limit = np.sqrt(c)//1
+        square = set()
+        for x in range(int(upper_limit)+1):
+            square.add(x * x)
+        for aSquare in square:
+            b = c-aSquare
+            if b in square:
+                return True
+        return False
