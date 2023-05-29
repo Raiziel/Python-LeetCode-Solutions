@@ -1,0 +1,11 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        s_split = list(s)
+        t_split = list(t)
+        s_split.sort()
+        t_split.sort()
+        
+        if(s_split==t_split):
+            return True
+        else: 
+            return False
