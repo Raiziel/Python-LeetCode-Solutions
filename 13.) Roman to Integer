@@ -1,0 +1,33 @@
+class Solution:
+    def romanToInt(self, s: str) -> int:
+        Roman_Dict = {
+        "I":1,
+        "V":5,
+        "X":10,
+        "L":50,
+        "C":100,
+        "D":500,
+        "M":1000,
+        }
+
+        x_arr = list(s)
+        Count = 0
+        n = len(x_arr)
+        if("IV" in s):
+            Count-=1*2
+        if("IX" in s ):
+            Count-=1*2
+        if('XL' in s ):
+            Count-=10*2
+        if('XC' in s ):
+            Count-=10*2
+        if('CD' in s ):
+            Count-=100*2
+        if('CM' in s ):
+            Count-=100*2
+        for i in range (0,n):
+
+            Count += Roman_Dict[x_arr[i]] 
+         
+
+        return(Count)
