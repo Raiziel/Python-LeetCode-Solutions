@@ -1,0 +1,13 @@
+class Solution:
+    squares = {0, 1, 4, 9, 16, 25, 36, 49, 64, 81}
+
+    def isHappy(self, n: int) -> bool:
+        seen = set()
+
+        while n != 1:
+            if n in seen:
+                return False
+            seen.add(n)
+            n = sum(self.squares[int(digit)] for digit in str(n))
+
+        return True
