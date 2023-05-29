@@ -1,0 +1,15 @@
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        
+        from collections import Counter
+        frequency = Counter(nums)
+        n = list(set(nums))
+        Dominant = n[0]
+        temp = 0
+        for i in n:
+
+            if(frequency[i]>=frequency[Dominant]):
+                print("i:",i,"Dominant:",Dominant)
+                temp = Dominant
+                Dominant = i
+        return(Dominant)
