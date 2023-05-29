@@ -1,0 +1,12 @@
+from collections import Counter
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        word = list(s)
+        frequency= Counter(word)
+        index = -1
+        for i in word:
+            if(frequency[i]==1):
+                index = word.index(i)
+                return index
+        if(index==-1):
+            return index
