@@ -1,0 +1,19 @@
+import string
+
+class Solution:
+    def convertToTitle(self, columnNumber: int) -> str:
+        
+        import string
+        Alphabet=list(string.ascii_uppercase)
+        iCol = columnNumber
+        columnString=""
+        while(iCol>=1):
+            a = (iCol-1)//26
+            b = (iCol-1)%26
+            b =Alphabet[b]
+            columnString+=b
+            iCol = a
+        if(iCol>25):
+            return columnString
+        else:
+            return columnString[::-1]
