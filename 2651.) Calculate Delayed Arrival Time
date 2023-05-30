@@ -5,7 +5,5 @@ class Solution:
         
         if(Time<24):
             return Time
-        if(Time==24):
-            return 0 
-        if(Time>24):
+        if(Time>=24):
             return Time-24
