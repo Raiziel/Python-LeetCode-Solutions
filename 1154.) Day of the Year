@@ -1,0 +1,5 @@
+class Solution:
+    def dayOfYear(self, date: str) -> int:
+        import datetime
+        today = datetime.datetime.strptime(date,'%Y-%m-%d').timetuple().tm_yday
+        return today
