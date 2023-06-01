@@ -1,0 +1,10 @@
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        res = []
+        for i in reversed(s):
+            res.append(i)
+        for i in range(len(s)):
+            s[i] = res[i]
