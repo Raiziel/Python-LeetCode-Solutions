@@ -1,0 +1,17 @@
+import numpy as np
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        
+        upper = max(nums) 
+        nums.sort()
+        nrange = list(np.arange(0,upper+1,1))
+        
+        for i in nums:
+            if i in nrange:
+                
+                nrange.remove(i)
+                
+        if(nrange==[]):
+            return upper+1
+        else:
+            return nrange[0]
