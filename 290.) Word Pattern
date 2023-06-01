@@ -1,0 +1,18 @@
+class Solution:
+    def wordPattern(self, pattern: str, s: str) -> bool:
+        pattern_array = list(pattern)
+        string_pattern = s.split()
+        length1 = len(pattern_array)
+        length2 = len(string_pattern)
+        length3 = len(set(list(zip(string_pattern, pattern_array))))
+        setlength1 = len(set(pattern_array))
+        setlength2 = len(set(string_pattern))
+        
+        
+        
+        
+        if(length1==length2) and (setlength1 == length3) and (setlength2 == length3):
+            return True
+            
+        else:
+            return False
