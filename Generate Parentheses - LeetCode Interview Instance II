@@ -1,0 +1,19 @@
+from typing import List
+
+class Solution:
+    def generateParenthesis(self, n: int) -> List[str]:
+        self.result = []
+        self.n = n
+        self.backtrack("", 0, 0)
+        return self.result
+
+    def backtrack(self, current: str, open_count: int, close_count: int):
+        if len(current) == 2 * self.n:
+            self.result.append(current)
+            return
+
+        if open_count < self.n:
+            self.backtrack(current + "(", open_count + 1, close_count)
+
+        if close_count < open_count:
+            self.backtrack(current + ")", open_count, close_count + 1)
